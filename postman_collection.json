@@ -1,0 +1,640 @@
+{
+  "info": {
+    "name": "Education Platform - Competitive Programming",
+    "description": "Complete API collection for testing the education platform",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Academic Year",
+      "item": [
+        {
+          "name": "Create First_Year",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"year\": \"First_Year\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/academic-year",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "academic-year"]
+            }
+          }
+        },
+        {
+          "name": "Create Second_Year",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"year\": \"Second_Year\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/academic-year",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "academic-year"]
+            }
+          }
+        },
+        {
+          "name": "Get All Years",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/academic-year",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "academic-year"]
+            }
+          }
+        },
+        {
+          "name": "Get Year by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/academic-year/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "academic-year", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Programming Languages",
+      "item": [
+        {
+          "name": "Create Python",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Python\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/languages",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "languages"]
+            }
+          }
+        },
+        {
+          "name": "Create Java",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Java\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/languages",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "languages"]
+            }
+          }
+        },
+        {
+          "name": "Assign Python to First_Year",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/languages/1/assign-year/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "languages", "1", "assign-year", "1"]
+            }
+          }
+        },
+        {
+          "name": "Assign Java to Second_Year",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/languages/2/assign-year/2",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "languages", "2", "assign-year", "2"]
+            }
+          }
+        },
+        {
+          "name": "Get All Languages",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/languages",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "languages"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Challenges",
+      "item": [
+        {
+          "name": "Create Two Sum (Python - Easy)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Two Sum\",\n  \"description\": \"Find two numbers that add up to target\",\n  \"problemStatement\": \"Given an array of integers nums and an integer target, return the indices of the two numbers that add up to target.\",\n  \"difficultyLevel\": \"EASY\",\n  \"timeLimit\": 5,\n  \"memoryLimit\": 256,\n  \"sampleInput\": \"nums = [2,7,11,15], target = 9\",\n  \"sampleOutput\": \"[0,1]\",\n  \"testCases\": \"[{\\\"input\\\": \\\"[2,7,11,15], 9\\\", \\\"output\\\": \\\"[0,1]\\\"}]\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/challenges/language/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "challenges", "language", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Reverse String (Python - Easy)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Reverse String\",\n  \"description\": \"Reverse a string\",\n  \"problemStatement\": \"Write a function that reverses a string.\",\n  \"difficultyLevel\": \"EASY\",\n  \"timeLimit\": 3,\n  \"memoryLimit\": 128,\n  \"sampleInput\": \"s = [\\\"h\\\",\\\"e\\\",\\\"l\\\",\\\"l\\\",\\\"o\\\"]\",\n  \"sampleOutput\": \"[\\\"o\\\",\\\"l\\\",\\\"l\\\",\\\"e\\\",\\\"h\\\"]\",\n  \"testCases\": \"[{\\\"input\\\": \\\"[h,e,l,l,o]\\\", \\\"output\\\": \\\"[o,l,l,e,h]\\\"}]\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/challenges/language/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "challenges", "language", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Linked List Cycle (Java - Medium)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Linked List Cycle\",\n  \"description\": \"Detect if there is a cycle in a linked list\",\n  \"problemStatement\": \"Given head, determine if the linked list has a cycle in it.\",\n  \"difficultyLevel\": \"MEDIUM\",\n  \"timeLimit\": 5,\n  \"memoryLimit\": 256,\n  \"sampleInput\": \"head = [3,2,0,-4], pos = 1\",\n  \"sampleOutput\": \"true\",\n  \"testCases\": \"[{\\\"input\\\": \\\"[3,2,0,-4], pos = 1\\\", \\\"output\\\": \\\"true\\\"}]\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/challenges/language/2",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "challenges", "language", "2"]
+            }
+          }
+        },
+        {
+          "name": "Get All Challenges",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/challenges",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "challenges"]
+            }
+          }
+        },
+        {
+          "name": "Get Challenges by Language (Python)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/challenges/language/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "challenges", "language", "1"]
+            }
+          }
+        },
+        {
+          "name": "Get Challenges by Difficulty (EASY)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/challenges/difficulty/EASY",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "challenges", "difficulty", "EASY"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Students",
+      "item": [
+        {
+          "name": "Create Student - John (First_Year)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@college.com\",\n  \"rollNumber\": \"CSE001\",\n  \"academicYear\": {\n    \"id\": 1\n  }\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/students",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "students"]
+            }
+          }
+        },
+        {
+          "name": "Create Student - Jane (First_Year)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Jane Smith\",\n  \"email\": \"jane.smith@college.com\",\n  \"rollNumber\": \"CSE002\",\n  \"academicYear\": {\n    \"id\": 1\n  }\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/students",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "students"]
+            }
+          }
+        },
+        {
+          "name": "Create Student - Bob (Second_Year)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Bob Wilson\",\n  \"email\": \"bob.wilson@college.com\",\n  \"rollNumber\": \"CSE051\",\n  \"academicYear\": {\n    \"id\": 2\n  }\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/students",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "students"]
+            }
+          }
+        },
+        {
+          "name": "Get All Students",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/students",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "students"]
+            }
+          }
+        },
+        {
+          "name": "Get Student by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/students/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "students", "1"]
+            }
+          }
+        },
+        {
+          "name": "View Curriculum (Student 1)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/students/1/curriculum",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "students", "1", "curriculum"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "5. Submissions",
+      "item": [
+        {
+          "name": "John Submits Two Sum (ACCEPTED)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"submittedCode\": \"def twoSum(nums, target):\\n    seen = {}\\n    for i, num in enumerate(nums):\\n        if target - num in seen:\\n            return [seen[target - num], i]\\n        seen[num] = i\\n    return []\",\n  \"status\": \"ACCEPTED\",\n  \"testOutput\": \"[0,1]\",\n  \"expectedOutput\": \"[0,1]\",\n  \"language\": \"Python\",\n  \"executionTimeMs\": 145\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/submissions/student/1/challenge/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "submissions", "student", "1", "challenge", "1"]
+            }
+          }
+        },
+        {
+          "name": "John Submits Reverse String (ACCEPTED)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"submittedCode\": \"def reverseString(s):\\n    s.reverse()\\n    return s\",\n  \"status\": \"ACCEPTED\",\n  \"testOutput\": \"[o,l,l,e,h]\",\n  \"expectedOutput\": \"[o,l,l,e,h]\",\n  \"language\": \"Python\",\n  \"executionTimeMs\": 98\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/submissions/student/1/challenge/2",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "submissions", "student", "1", "challenge", "2"]
+            }
+          }
+        },
+        {
+          "name": "Jane Submits Two Sum (WRONG_ANSWER)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"submittedCode\": \"def twoSum(nums, target):\\n    for i in range(len(nums)):\\n        for j in range(i+1, len(nums)):\\n            if nums[i] + nums[j] == target:\\n                return [i, j]\\n    return []\",\n  \"status\": \"WRONG_ANSWER\",\n  \"testOutput\": \"[0,2]\",\n  \"expectedOutput\": \"[0,1]\",\n  \"language\": \"Python\",\n  \"executionTimeMs\": 1250\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/submissions/student/2/challenge/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "submissions", "student", "2", "challenge", "1"]
+            }
+          }
+        },
+        {
+          "name": "Jane Submits Two Sum Again (ACCEPTED)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"submittedCode\": \"def twoSum(nums, target):\\n    seen = {}\\n    for i, num in enumerate(nums):\\n        if target - num in seen:\\n            return [seen[target - num], i]\\n        seen[num] = i\\n    return []\",\n  \"status\": \"ACCEPTED\",\n  \"testOutput\": \"[0,1]\",\n  \"expectedOutput\": \"[0,1]\",\n  \"language\": \"Python\",\n  \"executionTimeMs\": 142\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/submissions/student/2/challenge/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "submissions", "student", "2", "challenge", "1"]
+            }
+          }
+        },
+        {
+          "name": "Bob Submits Linked List Cycle (ACCEPTED)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"submittedCode\": \"class Solution {\\n    public boolean hasCycle(ListNode head) {\\n        if (head == null || head.next == null) return false;\\n        ListNode slow = head;\\n        ListNode fast = head.next;\\n        while (slow != fast) {\\n            if (fast == null || fast.next == null) return false;\\n            slow = slow.next;\\n            fast = fast.next.next;\\n        }\\n        return true;\\n    }\\n}\",\n  \"status\": \"ACCEPTED\",\n  \"testOutput\": \"true\",\n  \"expectedOutput\": \"true\",\n  \"language\": \"Java\",\n  \"executionTimeMs\": 256\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/submissions/student/3/challenge/3",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "submissions", "student", "3", "challenge", "3"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "6. Progress & Statistics",
+      "item": [
+        {
+          "name": "Get Total Solved for Student 1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/submissions/progress/student/1/solved-count",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "submissions", "progress", "student", "1", "solved-count"]
+            }
+          }
+        },
+        {
+          "name": "Get Solved Challenges for Student 1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/submissions/progress/student/1/solved",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "submissions", "progress", "student", "1", "solved"]
+            }
+          }
+        },
+        {
+          "name": "Get Accuracy Rate for Student 2",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/submissions/progress/student/2/accuracy",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "submissions", "progress", "student", "2", "accuracy"]
+            }
+          }
+        },
+        {
+          "name": "Get All Submissions for Student 1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/submissions/student/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "submissions", "student", "1"]
+            }
+          }
+        },
+        {
+          "name": "Get Submissions for Challenge 1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/submissions/challenge/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "submissions", "challenge", "1"]
+            }
+          }
+        },
+        {
+          "name": "Get Submissions by Status (ACCEPTED)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/submissions/status/ACCEPTED",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "submissions", "status", "ACCEPTED"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
